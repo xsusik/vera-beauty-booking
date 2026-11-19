@@ -1,0 +1,37 @@
+{
+  "bookingEnabled": false,
+  "businessName": "Vera Beauty Room",
+  "instagram": "https://www.instagram.com/vera_beauty__room/",
+  "schedule": {
+    "from": "2026-12-01",
+    "to": "2026-12-31",
+    "weekdays": [1, 2, 3, 4, 5],
+    "start": "09:00",
+    "end": "18:00",
+    "step": 30,
+    "breaks": [["13:00", "14:00"]],
+    "closedDates": ["2026-12-24", "2026-12-25", "2026-12-31"],
+    "blocked": {}
+  },
+  "services": [
+    {"id":"manicure","category":"Paznokcie","name":"Kombinowany manicure","price":60,"duration":60},
+    {"id":"hybrid","category":"Paznokcie","name":"Manicure hybrydowy (jeden kolor)","price":130,"duration":90},
+    {"id":"extensions","category":"Paznokcie","name":"Przedłużanie żelowe","price":190,"from":true,"duration":150},
+    {"id":"fantasy","category":"Paznokcie","name":"French konstrukcyjny (fantasy)","price":220,"from":true,"duration":180},
+    {"id":"refill","category":"Paznokcie","name":"Uzupełnienie żelowe (jeden kolor)","price":160,"duration":120},
+    {"id":"natural","category":"Paznokcie","name":"Żel na naturalnej płytce paznokci","price":160,"duration":120},
+    {"id":"remove-hybrid","category":"Paznokcie","name":"Ściąganie hybrydy","price":30,"duration":30},
+    {"id":"remove-gel","category":"Paznokcie","name":"Ściąganie żelu","price":40,"duration":45},
+    {"id":"pedicure","category":"Stopy","name":"Pedicure klasyczny","price":100,"duration":60},
+    {"id":"pedicure-hybrid","category":"Stopy","name":"Pedicure hybrydowy","price":130,"duration":90},
+    {"id":"pedicure-full","category":"Stopy","name":"Pełny pedicure","price":160,"duration":120},
+    {"id":"brows-henna","category":"Brwi","name":"Regulacja + henna","price":60,"duration":45},
+    {"id":"brows","category":"Brwi","name":"Regulacja","price":20,"duration":30}
+  ],
+  "extras": [
+    {"id":"french","name":"French / babyboomer","price":20,"duration":30,"services":["hybrid","extensions","refill","natural"]},
+    {"id":"design","name":"Wzorki (1 paznokieć)","price":5,"maxPrice":15,"maxQuantity":10,"duration":10,"services":["hybrid","extensions","refill","natural","fantasy"]},
+    {"id":"other-stylist","name":"Ściąganie po innej stylistce","price":20,"duration":30,"services":["hybrid","extensions","refill","natural","fantasy"]},
+    {"id":"feet-french","name":"French","price":20,"duration":20,"services":["pedicure","pedicure-hybrid","pedicure-full"]}
+  ]
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f8f4f1">
+  <meta name="description" content="Umów wizytę w Vera Beauty Room. Manicure, stylizacja paznokci, pedicure i brwi. Wybierz usługę i dogodny termin.">
+  <title>Umów wizytę — Vera Beauty Room</title>
+  <link rel="icon" href="./assets/icon.png"><link rel="stylesheet" href="./style.css"><script src="./app.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="./"><span class="brand-v">V</span><span>vera beauty<small>ROOM · REZERWACJA ONLINE</small></span></a><a class="instagram" href="https://www.instagram.com/vera_beauty__room/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></header>
+  <main>
+    <section class="intro"><div><p class="eyebrow">ZAREZERWUJ CHWILĘ DLA SIEBIE</p><h1>Piękne paznokcie.<br><em>Twój dobry moment.</em></h1><p>Wybierz zabieg i dogodny termin.<br>O resztę zadbamy w Vera Beauty Room.</p></div><a class="price-link" href="./assets/cennik.png" target="_blank" rel="noopener noreferrer"><span>✧</span>Zobacz pełny cennik ↗</a></section>
+    <details class="full-prices"><summary>Pełny cennik usług i dodatków</summary><div id="price-catalog"></div></details>
+    <div id="notice" class="notice" role="status">Ładowanie dostępnych usług…</div>
+    <div class="booking-layout">
+      <div class="booking-main">
+        <section class="card" id="services"><div class="section-head"><span class="step">1</span><div><h2>Na co masz ochotę?</h2><p>Wybierz jedną usługę i opcjonalne dodatki.</p></div></div>
+          <div class="categories" role="group" aria-label="Kategorie usług"></div><div id="service-list"></div><div id="extras"></div>
+        </section>
+        <section class="card" id="date-section"><div class="section-head"><span class="step">2</span><div><h2>Znajdź swój termin</h2><p>Godziny podajemy według czasu w Polsce.</p></div></div>
+          <div class="calendar-head"><button id="previous" type="button" aria-label="Poprzedni miesiąc">‹</button><h3 id="month">Grudzień 2026</h3><button id="next" type="button" aria-label="Następny miesiąc">›</button></div>
+          <div class="weekdays" aria-hidden="true"><span>Pon</span><span>Wt</span><span>Śr</span><span>Czw</span><span>Pt</span><span>Sob</span><span>Nd</span></div>
+          <div id="calendar" aria-label="Wybierz datę"></div>
+          <div class="slots-head"><h3>Dostępne godziny</h3><span id="slot-date"></span></div><div id="slots" aria-live="polite"><p class="hint">Najpierw wybierz usługę i datę.</p></div>
+        </section>
+        <section class="card" id="details"><div class="section-head"><span class="step">3</span><div><h2>Jeszcze kilka szczegółów</h2><p>Skontaktujemy się z Tobą, aby potwierdzić wizytę.</p></div></div>
+          <form id="booking-form">
+            <div class="fields"><label>Imię i nazwisko<input name="name" required autocomplete="name" minlength="2" maxlength="100" placeholder="Jak się nazywasz?"></label><label>Numer telefonu<input name="phone" type="tel" required autocomplete="tel" maxlength="24" placeholder="+48 600 000 000"></label></div>
+            <label>Uwagi <span class="optional">(opcjonalnie)</span><textarea name="note" maxlength="600" rows="3" placeholder="Np. interesuje mnie konkretne zdobienie…"></textarea></label>
+            <label class="trap" aria-hidden="true">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+            <label class="consent"><input name="consent" type="checkbox" required><span>Zgadzam się na wykorzystanie podanych danych do obsługi i potwierdzenia mojej wizyty. <a href="#privacy">Informacja o danych</a></span></label>
+            <div id="form-error" role="alert"></div>
+            <button class="submit" type="submit" id="submit" disabled>Wybierz usługę i termin <span>↗</span></button>
+            <p class="form-note">Wysyłasz prośbę o wizytę. Termin potwierdzimy w kontakcie z Tobą.</p>
+          </form>
+          <div id="success" hidden role="status"><div class="success-icon">✓</div><h2>Dziękujemy!</h2><p>Twoja prośba została zapisana. Skontaktujemy się z Tobą, aby potwierdzić wizytę.</p><p id="success-details"></p><p class="reference" id="reference"></p><a href="./" class="secondary">Wróć na początek</a></div>
+        </section>
+      </div>
+      <aside class="summary card" aria-label="Podsumowanie wizyty"><div class="summary-flower" aria-hidden="true">✳</div><p class="eyebrow">TWÓJ MOMENT W VERA BEAUTY ROOM</p><h2>Twoja wizyta</h2><div id="summary"></div><div class="summary-bottom">✧ <span>Masz pytanie o stylizację?<br><a href="https://www.instagram.com/vera_beauty__room/" target="_blank" rel="noopener noreferrer">Napisz na Instagramie ↗</a></span></div></aside>
+    </div>
+    <section id="privacy" class="privacy"><details><summary>Jak wykorzystujemy Twoje dane?</summary><p>Podane imię, numer telefonu, wybrany zabieg, termin i uwagi są przekazywane Vera Beauty Room w celu obsługi prośby o wizytę. Zgłoszenie trafia do systemu rezerwacji i do salonu przez Telegram. W sprawie zmiany, anulowania wizyty lub usunięcia danych skontaktuj się z salonem przez <a href="https://www.instagram.com/vera_beauty__room/" target="_blank" rel="noopener noreferrer">Instagram</a>.</p></details></section>
+  </main>
+  <footer><span>Vera Beauty Room</span><span>Z myślą o Tobie, z dbałością o detale.</span></footer>
+</body>
+</html>
